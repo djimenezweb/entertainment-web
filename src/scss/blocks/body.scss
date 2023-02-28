@@ -1,7 +1,10 @@
 html {
 }
 body {
-  background-image: url('/assets/images/anubis.jpg');
-  background-size: contain;
-  filter: invert(1);
+  background-color: var(--dark-blue);
+  font-family: 'Outfit', sans-serif;
+  color: white;
+  max-width: 1440px;
+  margin: 0 auto;
+  //background-image: url('/assets/images/anubis.jpg');
 }

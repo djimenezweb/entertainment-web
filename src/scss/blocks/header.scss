@@ -1,1 +1,24 @@
+.header {
+  padding: 1rem;
+  background-color: var(--semidark-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.active {
+  filter: brightness(400%);
+}
+
+.avatar {
+  width: 24px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
