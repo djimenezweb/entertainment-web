@@ -1,16 +1,45 @@
+@use '../mixins/responsive.scss' as *;
+
 .header {
   padding: 1rem;
   background-color: var(--semidark-blue);
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include responsive(laptop) {
+    flex-direction: column;
+    position: fixed;
+    padding: 2rem;
+    top: 2rem;
+    left: 2rem;
+    height: calc(100vh - 4rem);
+    max-height: 60rem;
+    border-radius: 1rem;
+  }
 }
 
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
+.nav {
+  @include responsive(laptop) {
+    margin-bottom: auto;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+
+    @include responsive(laptop) {
+      flex-direction: column;
+    }
+  }
+}
+
+.logo {
+  @include responsive(laptop) {
+    margin-bottom: 4.5rem;
+  }
 }
 
 .active {
