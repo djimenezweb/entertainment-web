@@ -2,6 +2,7 @@
   &__slider {
     display: flex;
     gap: 2.5rem;
+    overflow-x: scroll;
   }
   &__card {
     flex-shrink: 0;
@@ -11,7 +12,7 @@
     align-items: end;
     overflow: hidden;
   }
-  &__card__info {
+  &__card-info {
     padding: 1.5rem;
   }
 }

@@ -32,11 +32,11 @@
     <header class="header">
       <img class="logo" src="./assets/images/logo.svg" alt="" />
       <nav class="nav">
-        <ul class="nav__list">
-          <li><img class="active" src="./assets/images/icon-nav-home.svg" alt="" /></li>
-          <li><img src="./assets/images/icon-nav-movies.svg" alt="" /></li>
-          <li><img src="./assets/images/icon-nav-tv-series.svg" alt="" /></li>
-          <li><img src="./assets/images/icon-nav-bookmark.svg" alt="" /></li>
+        <ul class="nav__list" id="nav__list">
+          <li><img class="active" src="./assets/images/icon-nav-home.svg" data-icon="home" alt="" /></li>
+          <li><img src="./assets/images/icon-nav-movies.svg" data-icon="movies" alt="" /></li>
+          <li><img src="./assets/images/icon-nav-tv-series.svg" data-icon="series" alt="" /></li>
+          <li><img src="./assets/images/icon-nav-bookmark.svg" data-icon="bookmark" alt="" /></li>
         </ul>
       </nav>
       <img class="avatar" src="./assets/images/image-avatar.png" alt="" />
@@ -48,56 +48,57 @@
           <input type="text" id="search__input" class="search__input heading--m" placeholder="Search for movies or TV series" />
         </div>
       </form>
+      <div id="root-app">
+        <!--<section class="trending">
+          <h2 class="heading--l">Trending</h2>
+          <div class="trending__slider">
+            <article class="trending__card">
+              <img src="./assets/images/placeholder.png" alt="" />
+              <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
+              <div class="trending__card__info">
+                <p class="body--m">2019 · Movie · PG</p>
+                <h3 class="heading--s">Beyond Earth</h3>
+              </div>
+            </article>
+            <article class="trending__card">
+              <img src="./assets/images/placeholder.png" alt="" />
+              <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
+              <div class="trending__card__info">
+                <p class="body--m">2019 · Movie · PG</p>
+                <h3 class="heading--s">Beyond Earth</h3>
+              </div>
+            </article>
+            <article class="trending__card">
+              <img src="./assets/images/placeholder.png" alt="" />
+              <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
+              <div class="trending__card__info">
+                <p class="body--m">2019 · Movie · PG</p>
+                <h3 class="heading--s">Beyond Earth</h3>
+              </div>
+            </article>
+            <article class="trending__card">
+              <img src="./assets/images/placeholder.png" alt="" />
+              <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
+              <div class="trending__card__info">
+                <p class="body--m">2019 · Movie · PG</p>
+                <h3 class="heading--s">Beyond Earth</h3>
+              </div>
+            </article>
+            <article class="trending__card">
+              <img src="./assets/images/placeholder.png" alt="" />
+              <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
+              <div class="trending__card__info">
+                <p class="body--m">2019 · Movie · PG</p>
+                <h3 class="heading--s">Beyond Earth</h3>
+              </div>
+            </article>
+          </div>
+        </section>
 
-      <section class="trending">
-        <h2 class="heading--l">Trending</h2>
-        <div class="trending__slider">
-          <article class="trending__card">
-            <img src="./assets/images/placeholder.png" alt="" />
-            <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
-            <div class="trending__card__info">
-              <p class="body--m">2019 · Movie · PG</p>
-              <h3 class="heading--s">Beyond Earth</h3>
-            </div>
-          </article>
-          <article class="trending__card">
-            <img src="./assets/images/placeholder.png" alt="" />
-            <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
-            <div class="trending__card__info">
-              <p class="body--m">2019 · Movie · PG</p>
-              <h3 class="heading--s">Beyond Earth</h3>
-            </div>
-          </article>
-          <article class="trending__card">
-            <img src="./assets/images/placeholder.png" alt="" />
-            <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
-            <div class="trending__card__info">
-              <p class="body--m">2019 · Movie · PG</p>
-              <h3 class="heading--s">Beyond Earth</h3>
-            </div>
-          </article>
-          <article class="trending__card">
-            <img src="./assets/images/placeholder.png" alt="" />
-            <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
-            <div class="trending__card__info">
-              <p class="body--m">2019 · Movie · PG</p>
-              <h3 class="heading--s">Beyond Earth</h3>
-            </div>
-          </article>
-          <article class="trending__card">
-            <img src="./assets/images/placeholder.png" alt="" />
-            <div class="bookmark-icon"><img src="./assets/images/icon-bookmark-empty.svg" alt="" /></div>
-            <div class="trending__card__info">
-              <p class="body--m">2019 · Movie · PG</p>
-              <h3 class="heading--s">Beyond Earth</h3>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="grid">
-        <h2 class="heading--l">Recommended for you</h2>
-      </section>
+        <section class="grid">
+          <h2 class="heading--l">Recommended for you</h2>
+        </section>-->
+      </div>
     </main>
     <script type="module" src="./js/index.js"></script>
   </body>
