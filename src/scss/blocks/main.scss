@@ -1,1 +1,13 @@
-/* ESTILOS DEL MAIN */
+@use '../mixins/responsive.scss' as *;
+
+.main {
+  margin: 0 1rem;
+
+  @include responsive(tablet) {
+    margin: 0 1.5rem;
+  }
+
+  @include responsive(desktop) {
+    margin-left: 10.125rem;
+  }
+}
