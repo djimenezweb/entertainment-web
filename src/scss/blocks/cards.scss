@@ -1,3 +1,93 @@
+@use '../mixins/responsive.scss' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  @include responsive(tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+  }
+
+  @include responsive(desktop) {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+.slider {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+  .card {
+    flex-shrink: 0;
+    display: grid;
+    position: relative;
+    align-items: end;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    //scroll-margin: 1rem;
+
+    * {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 50%);
+      z-index: 10;
+    }
+  }
+
+  .card__info {
+    padding: 1.5rem;
+    z-index: 100;
+  }
+}
+
+.card {
+  position: relative;
+}
+
+.card__info {
+  span {
+    position: relative;
+    margin-left: 2.5em;
+  }
+
+  &--movie::before,
+  &--tv::before {
+    content: '•';
+    position: relative;
+    left: -2em;
+  }
+
+  &--movie::after,
+  &--tv::after {
+    content: '';
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    bottom: 0.1em;
+    left: -1.1em;
+    background-image: url(/assets/images/icon-category-movie.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--tv::after {
+    background-image: url(/assets/images/icon-category-tv.svg);
+  }
+}
+
+.backdrop {
+  border-radius: 0.5rem;
+}
+
 .bookmark-icon {
   position: absolute;
   top: 1rem;

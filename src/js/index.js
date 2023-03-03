@@ -35,8 +35,8 @@ nav.addEventListener('click', e => {
   //if (e.target.classList.contains('active')) return;
   if (e.target.dataset.icon === 'home') {
     rootApp.innerHTML = '';
-    printSlider(API + trending + key);
-    printSection(API + topRated + key);
+    printSlider(API + trending + key, 'Trending');
+    printSection(API + topRated + key, 'Top Rated');
   }
 });
 
