@@ -6,11 +6,16 @@ const fetchData = async url => {
 
 const createElement = (element, classes, content) => {
   const newElement = document.createElement(element);
-  let classesArray = [];
-  classesArray = [...classes];
-  if (classesArray.length > 0) newElement.classList.add(...classesArray);
+  newElement.classList.add(classes);
   element !== 'img' ? (newElement.textContent = content) : (newElement.src = content);
   return newElement;
 };
+
+// const createElement2 = (element, content, ...classes) => {
+//   const newElement = document.createElement(element);
+//   element !== 'img' ? (newElement.textContent = content) : (newElement.src = content);
+//   if (classes.length > 0) newElement.classList.add(classes);
+//   return newElement;
+// };
 
 export { fetchData, createElement };

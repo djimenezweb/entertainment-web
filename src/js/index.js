@@ -1,20 +1,12 @@
-// El styles lo importamos aquí, ya se carga después al compilar todo
 import '../scss/styles.scss';
-import { fetchData, createElement } from './utils';
 import { printSlider } from './print-slider';
 import { printSection } from './print-section';
 
-/* API: https://www.themoviedb.org/ 
-Clave de la API (v3 auth)
-8c249596e745671ad9c2727c7f926d41
-
-Ejemplo de solicitud de API
-https://api.themoviedb.org/3/movie/550?api_key=8c249596e745671ad9c2727c7f926d41
-
-Imágenes
-https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
-
-Documentación: https://developers.themoviedb.org/3/getting-started/images
+/*
+API: https://www.themoviedb.org/ 
+Clave de la API (v3 auth) 8c249596e745671ad9c2727c7f926d41
+Ejemplo de solicitud de API https://api.themoviedb.org/3/movie/550?api_key=8c249596e745671ad9c2727c7f926d41
+Documentación imágenes: https://developers.themoviedb.org/3/getting-started/images
 */
 
 // CONSTANTES
@@ -38,6 +30,7 @@ nav.addEventListener('click', e => {
     rootApp.innerHTML = '';
     printSlider(API + trending + key, 'Trending');
     printSection(API + topRatedMovies + key, 'Top Rated');
+    printSection(API + topRatedTV + key, 'Top Rated TV Series');
   }
 });
 

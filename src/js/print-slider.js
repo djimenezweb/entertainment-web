@@ -7,7 +7,7 @@ const printSlider = async (url, title) => {
   const data = await fetchData(url);
 
   const fragment = document.createDocumentFragment();
-  const section = createElement('section');
+  const section = createElement('section', 'section');
   const h2 = createElement('h2', 'heading--l', title);
   const slider = createElement('div', 'slider');
 
@@ -17,8 +17,8 @@ const printSlider = async (url, title) => {
     card.dataset.id = result.id;
     const background = createElement('img', 'backdrop');
     background.src = `https://image.tmdb.org/t/p/w500${result.backdrop_path}`;
-    const bookmarkContainer = createElement('div', 'bookmark-icon');
-    const bookmarkImg = createElement('img');
+    const bookmarkContainer = createElement('div', 'bookmark__container');
+    const bookmarkImg = createElement('img', 'bookmark__icon');
     bookmarkImg.src = bookmarkSvg;
     const cardInfo = createElement('div', 'card__info');
     const cardDetailsDate = isMovie ? result.release_date.substring(0, 4) : result.first_air_date.substring(0, 4);
@@ -34,9 +34,9 @@ const printSlider = async (url, title) => {
     card.prepend(background);
     slider.append(card);
   });
+  section.append(h2);
+  section.append(slider);
   fragment.append(section);
-  fragment.append(h2);
-  fragment.append(slider);
   rootApp.prepend(fragment);
 };
 
