@@ -1,3 +1,8 @@
+const updateNav = icon => {
+  document.querySelector('.active').classList.remove('active');
+  icon.classList.add('active');
+};
+
 const fetchData = async url => {
   const request = await fetch(url);
   const data = await request.json();
@@ -18,4 +23,4 @@ const createElement = (element, classes, content) => {
 //   return newElement;
 // };
 
-export { fetchData, createElement };
+export { fetchData, createElement, updateNav };

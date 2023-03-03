@@ -1,5 +1,7 @@
-import bookmarkSvg from '../assets/images/icon-bookmark-empty.svg';
+import bookmarkEmpty from '../assets/images/icon-bookmark-empty.svg';
+import bookmarkFull from '../assets/images/icon-bookmark-full.svg';
 import { fetchData, createElement } from './utils';
+import { favorites } from './bookmarks';
 
 const rootApp = document.getElementById('root-app');
 
@@ -17,10 +19,16 @@ const printSection = async (url, title) => {
     const card = createElement('article', 'card');
     card.dataset.id = result.id;
     const background = createElement('img', 'backdrop');
-    background.src = `https://image.tmdb.org/t/p/w300${result.backdrop_path}`;
+    if (result.backdrop_path !== 'null') {
+      background.src = `https://image.tmdb.org/t/p/w300${result.backdrop_path}`;
+    }
     const bookmarkContainer = createElement('div', 'bookmark__container');
     const bookmarkImg = createElement('img', 'bookmark__icon');
-    bookmarkImg.src = bookmarkSvg;
+    if (favorites.includes(String(result.id))) {
+      bookmarkImg.src = bookmarkFull;
+    } else {
+      bookmarkImg.src = bookmarkEmpty;
+    }
     const cardInfo = createElement('div', 'card__info');
     const cardDetailsDate = isMovie ? result.release_date.substring(0, 4) : result.first_air_date.substring(0, 4);
     const cardDetailsType = isMovie ? createElement('span', 'card__info--movie', 'Movie') : createElement('span', 'card__info--tv', 'TV');
