@@ -24,7 +24,8 @@ const rootApp = document.getElementById('root-app');
 
 const API = 'https://api.themoviedb.org/';
 const trending = '3/trending/all/day';
-const topRated = '3/movie/top_rated';
+const topRatedMovies = '3/movie/top_rated';
+const topRatedTV = '3/tv/top_rated';
 const key = '?api_key=8c249596e745671ad9c2727c7f926d41';
 
 // FUNCIONES
@@ -36,7 +37,7 @@ nav.addEventListener('click', e => {
   if (e.target.dataset.icon === 'home') {
     rootApp.innerHTML = '';
     printSlider(API + trending + key, 'Trending');
-    printSection(API + topRated + key, 'Top Rated');
+    printSection(API + topRatedMovies + key, 'Top Rated');
   }
 });
 
