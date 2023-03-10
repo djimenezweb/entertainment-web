@@ -16,11 +16,4 @@ const createElement = (element, classes, content) => {
   return newElement;
 };
 
-// const createElement2 = (element, content, ...classes) => {
-//   const newElement = document.createElement(element);
-//   element !== 'img' ? (newElement.textContent = content) : (newElement.src = content);
-//   if (classes.length > 0) newElement.classList.add(classes);
-//   return newElement;
-// };
-
 export { fetchData, createElement, updateNav };

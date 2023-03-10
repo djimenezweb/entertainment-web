@@ -19,8 +19,10 @@ const printSection = async (url, title) => {
     const card = createElement('article', 'card');
     card.dataset.id = result.id;
     const background = createElement('img', 'backdrop');
-    if (result.backdrop_path !== 'null') {
+    if (result.backdrop_path) {
       background.src = `https://image.tmdb.org/t/p/w300${result.backdrop_path}`;
+    } else {
+      background.src = 'assets/images/no-poster.png';
     }
     const bookmarkContainer = createElement('div', 'bookmark__container');
     const bookmarkImg = createElement('img', 'bookmark__icon');
