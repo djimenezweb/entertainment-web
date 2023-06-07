@@ -14,6 +14,8 @@ const printSection = async (url, title) => {
   const grid = createElement('div', 'grid');
 
   data.results.forEach(result => {
+    // Si es persona se cancela
+    if (result.media_type === 'person') return;
     // Comprueba si existe result.title haciendo una conversión forzada
     const isMovie = !!result.title;
     const card = createElement('article', 'card');
